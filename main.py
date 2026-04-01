@@ -1,5 +1,5 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QHBoxLayout, QFrame
-from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QHBoxLayout
+from components.sidebar import Sidebar
 
 
 class MainWindow(QMainWindow):
@@ -13,22 +13,21 @@ class MainWindow(QMainWindow):
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
 
-        # Layout principal horizontal
-        main_layout = QHBoxLayout()
-        central_widget.setLayout(main_layout)
+        # Layout principal
+        layout = QHBoxLayout()
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(0)
+        central_widget.setLayout(layout)
 
         # Sidebar
-        self.sidebar = QFrame()
-        self.sidebar.setFixedWidth(250)
-        self.sidebar.setObjectName("sidebar")
+        self.sidebar = Sidebar()
 
-        # Contenido
-        self.content = QFrame()
-        self.content.setObjectName("content")
+        # Contenido (vacío por ahora)
+        self.content = QWidget()
 
         # Agregar al layout
-        main_layout.addWidget(self.sidebar)
-        main_layout.addWidget(self.content)
+        layout.addWidget(self.sidebar)
+        layout.addWidget(self.content)
 
 
 if __name__ == "__main__":
