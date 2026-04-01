@@ -1,0 +1,55 @@
+#sidebar {
+    background-color: #2a2a40;
+}
+
+#content {
+    background-color: #f5f7fb;
+}
+
+#mainSeparator {
+    background-color: #d8dce7;
+    min-width: 1px;
+    max-width: 1px;
+}
+
+#sidebarTitle {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contentTitle {
+    color: #1e2433;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#contentHint {
+    color: #5c6475;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#sectionLabel {
+    color: #9aa0b4;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#sidebarButton {
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    border-radius: 8px;
+}
+
+#sidebarButton:hover {
+    background-color: #3a3a5a;
+}
+
+#sidebarButton:pressed {
+    background-color: #50507a;
+}
